@@ -26,9 +26,49 @@
             <div class="col-md-4 col-sm-12">
                 <h5>Impressum</h5>
                 <ul>
-                    {{ range $key,$value:=.Site.Params.author.contactInfo }}
-                    <li><span>{{ title $key }}: </span> <span>{{ $value }}</span></li>
-                    {{ end }}
+                    {{ if .Site.Params.verein.name }}
+                    <li>
+                        <span>{{ .Site.Params.verein.name }}</span>
+                    </li>
+                    {{end}}
+
+                    {{ if .Site.Params.verein.erster_vorsitzender }}
+                    <li>
+                        <span>1. Vorsitzender: </span>
+                        <span>{{ .Site.Params.verein.erster_vorsitzender}}</span>
+                    </li>
+                    {{end}}
+
+                    {{ if .Site.Params.verein.anschrift }}
+                    <li>
+                        <span>Anschrift: </span>
+                        <span>{{ .Site.Params.verein.anschrift }}</span>
+                    </li>
+                    {{end}}
+
+                    {{ if .Site.Params.verein.email }}
+                    <li>
+                        <span>Email: </span>
+                        <span><a
+                                href="mailto:{{ .Site.Params.verein.email }}">{{ .Site.Params.verein.email }}</a></span>
+                    </li>
+                    {{end}}
+
+                    {{ if .Site.Params.verein.telefon }}
+                    <li>
+                        <span>Telefon: </span>
+                        <span><a
+                                href="tel:{{ .Site.Params.verein.telefon }}">{{ .Site.Params.verein.telefon }}</a></span>
+                    </li>
+                    {{end}}
+
+
+                    <!-- {{ range $key,$value:=.Site.Params.author.contactInfo }}
+                    <li>
+                        <span>{{ title $key }}: </span>
+                        <span>{{ $value }}</span>
+                    </li>
+                    {{ end }} -->
                 </ul>
             </div>
             {{ if .Site.Params.newsletter.enable }}
