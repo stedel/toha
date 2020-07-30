@@ -17,7 +17,7 @@
 
       </div>
       <div class="col-md-4 col-sm-12">
-        <h5>Contact Me</h5>
+                <h5>Impressum</h5>
         <ul>
           {{ range $key,$value:=.Site.Params.author.contactInfo }}
           <li><span>{{ title $key }}: </span> <span>{{ $value }}</span></li>
@@ -30,16 +30,10 @@
         <p>Stay up to date with email notification</p>
         <form>
           <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
-            />
-            <small id="emailHelp" class="form-text text-muted"
-              >We'll never share your email with anyone else.</small
-            >
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email" />
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
           </div>
           <button type="submit" class="btn btn-info">Submit</button>
         </form>
