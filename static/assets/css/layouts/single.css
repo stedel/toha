@@ -258,6 +258,8 @@ mark {
 }
 
 .next-prev-navigator {
+  display: flex;
+  justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
 }

@@ -12,7 +12,7 @@ Example Site: [Toha Example Site](https://toha.netlify.app)
 - Fully Responsive
 - Carefully designed cards
 - Great Experience timeline
-- Achievement gallery
+- angebote gallery
 - Sidebar to categorize posts
 - Short Codes
 - Google Analytics Support
@@ -210,7 +210,7 @@ Here, are the current plan and progress of various components of this theme. The
   - [ ] Overview
   - [ ] Certificate
 
-- [x] **Achievements Gallery**
+- [x] **angebotes Gallery**
   - [x] Image
   - [x] Summary
 

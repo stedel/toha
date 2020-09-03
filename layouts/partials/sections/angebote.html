@@ -1,0 +1,15 @@
+<div class="container-fluid anchor pb-5 angebotes-section" id="{{ replace (lower .section.name) " " "-" }}">
+    {{ if not (.section.hideTitle) }}
+    <h1 class="text-center">{{ .section.name }}</h1>
+    {{ end }}
+    <div class="container">
+        <div class="row" id="gallery">
+        </div>
+    </div>
+    <!-- angebotes-holder holds angebote-entry -->
+    <div class="d-none" id="angebotes-holder">
+        {{ range .angebote }}
+        {{ partial "sections/angebote/entry.html" . }}
+        {{ end }}
+    </div>
+</div>

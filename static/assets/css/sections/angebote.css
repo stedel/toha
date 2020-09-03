@@ -1,8 +1,8 @@
-.achievements-section .container {
+.angebotes-section .container {
   padding-top: 0.5rem;
 }
 
-#gallery .achievement-entry {
+#gallery .angebote-entry {
   cursor: pointer;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -18,7 +18,7 @@
   transition: all 0.3s ease-out;
 }
 
-#gallery .achievement-entry:hover {
+#gallery .angebote-entry:hover {
   cursor: pointer;
   z-index: 1;
   transform: scale(1.1);
@@ -26,7 +26,7 @@
   z-index: 20000;
 }
 
-#gallery .achievement-details {
+#gallery .angebote-details {
   cursor: pointer;
   z-index: 1;
   opacity: 1 !important;
@@ -50,7 +50,7 @@
   opacity: 0;
 }
 
-#gallery .achievement-entry:hover i {
+#gallery .angebote-entry:hover i {
   opacity: 1;
   font-size: 1rem;
   transition: all 0.3s ease-out;
@@ -63,14 +63,14 @@
   margin-top: 50px;
 }
 
-#gallery .achievement-details.img-type-1 i,
-.achievement-details.img-type-2 i {
+#gallery .angebote-details.img-type-1 i,
+.angebote-details.img-type-2 i {
   margin-top: 0px !important;
   transition: none !important;
   float: right;
 }
 
-#gallery .achievement-entry .title {
+#gallery .angebote-entry .title {
   color: #e5e9f2;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
@@ -82,7 +82,7 @@
   bottom: -5px;
 }
 
-#gallery .achievement-entry:hover .title {
+#gallery .angebote-entry:hover .title {
   opacity: 1;
   bottom: 0px;
   transition: bottom 0.3s ease-out;
@@ -112,7 +112,7 @@
   display: none !important;
 }
 
-#gallery .achievement-details {
+#gallery .angebote-details {
   height: 75vh !important;
 }
 
@@ -142,10 +142,10 @@
 /* Medium devices (tablets, 768px and up) */
 
 @media only screen and (max-width: 768px) {
-  .achievements-section .container {
+  .angebotes-section .container {
     max-width: 100%;
   }
-  .achievements-section .col-md-6 {
+  .angebotes-section .col-md-6 {
     flex: 50%;
     width: 50%;
   }
@@ -154,7 +154,7 @@
 /* Small devices (landscape phones, 576px and up) */
 
 @media only screen and (max-width: 576px) {
-  #gallery .achievement-entry:hover {
+  #gallery .angebote-entry:hover {
     transform: scale(1.05);
   }
 }
