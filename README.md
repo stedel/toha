@@ -75,8 +75,11 @@ enableEmoji: true
 
 # Custom parameters
 params:
-  # copyright
+  # Copyright Notice
   copyright: © 2020 Copyright.
+
+  # Meta description for your site.  This will help the search engines to find your site.
+  description: Portfolio and personal blog of Jane Doe.
 
   # background image of the landing page
   background: "images/background.jpg"
@@ -113,6 +116,8 @@ params:
     name: "Jane Doe"
     nickname: "Jane"
     image: "images/avatar.png"
+    # greeting message before your name. it will default to "Hi! I am" if not provided
+    greeting: "Hi, I am"
     # give your some contact information. they will be used in the footer
     contactInfo:
       email: "janedoe@example.com"
@@ -125,6 +130,9 @@ params:
 ```
 
 You can just copy the content for `config.yaml` files from `theme/toha/exampleSite/config.yaml`.
+
+If you want to customize the any of the CSS styles on your site, create a
+`static/assets/css/style.css` file and add any custom CSS there.
 
 ## Usage
 
