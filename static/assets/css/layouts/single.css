@@ -349,24 +349,6 @@ mark {
     max-width: 100%;
   }
 
-  .toc-section {
-    order: 3;
-    flex: 0%;
-    max-width: 0%;
-    transition: all ease-out 0.3s;
-  }
-  .toc-section.hide {
-    flex: 40%;
-    max-width: 40%;
-    margin-left: 0.5rem;
-    transition: all ease-out 0.3s;
-  }
-
-  .toc-holder {
-    top: 3rem;
-    max-height: calc(100vh - 3rem);
-  }
-
   .navbar-toggler {
     display: block;
   }
