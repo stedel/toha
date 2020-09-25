@@ -1,32 +1,32 @@
 <div class="row next-prev-navigator">
     {{ $currentPage := . }}
-    {{ range (where site.RegularPages.ByDate "Type" "in" site.Params.mainSections )}}
-    {{ if eq .RelPermalink  $currentPage.RelPermalink }}
-    {{ if .Next }}
-    {{ if (in site.Params.mainSections .Next.Type) }}
-    <div class="col-sm-6 previous-article">
-        <a href="{{.Next.RelPermalink}}" class="btn btn-outline-info">
-            <span><i class="fas fa-chevron-circle-left"></i></span> <span>{{ .Next.Title }}</span>
-        </a>
-    </div>
-    {{ end }}
-    {{ end }}
-    {{ if .Prev }}
-    {{ if (in site.Params.mainSections .Prev.Type)  }}
-    {{ $columnWidth:="col-sm-12" }}
-    {{ if .Next }}
-    {{ if (in site.Params.mainSections .Next.Type) }}
-    {{ $columnWidth = "col-sm-6" }}
-    {{ end }}
-    {{ end}}
-    <div class="{{ $columnWidth }} next-article">
-        <a href="{{ .Prev.RelPermalink }}" class="btn btn-outline-info">
-            <span>{{ .Prev.Title }}</span>
-            <span><i class="fas fa-chevron-circle-right"></i></span>
-        </a>
-    </div>
-    {{ end }}
-    {{ end }}
-    {{ end }}
-    {{ end }}
+        {{ range (where site.RegularPages.ByDate "Type" "in" site.Params.mainSections )}}
+            {{ if eq .RelPermalink  $currentPage.RelPermalink }}
+                {{ if .Next }}
+                    {{ if (in site.Params.mainSections .Next.Type) }}
+                        <div class="col-sm-6 previous-article">
+                            <a href="{{.Next.RelPermalink}}"    class="btn btn-outline-info">
+                                <span><i class="fas fa-chevron-circle-left"></i></span> <span>{{ .Next.Title }}</span>
+                            </a>
+                        </div>
+                    {{ end }}
+                {{ end }}
+                {{ if .Prev }}
+                    {{ if (in site.Params.mainSections .Prev.Type)  }}
+                        {{ $columnWidth:="col-sm-12" }}
+                            {{ if .Next }}
+                                {{ if (in site.Params.mainSections .Next.Type) }}
+                                    {{ $columnWidth = "col-sm-6" }}
+                                {{ end }}
+                            {{ end}}
+                            <div class="{{ $columnWidth }} next-article">
+                                <a href="{{ .Prev.RelPermalink }}" class="btn btn-outline-info">
+                                    <span>{{ .Prev.Title }}</span>
+                                    <span><i class="fas fa-chevron-circle-right"></i></span>
+                                </a>
+                            </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
 </div>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>{{- .Site.Title -}}</title>
     <meta name="description" content="{{ .Site.Params.description }}" />
     <!-- import common headers -->
@@ -18,12 +17,11 @@
 
     <!-- Add Google Analytics if enabled in configuration -->
     {{ if .Site.GoogleAnalytics }}
-    {{ template "_internal/google_analytics_async.html" . }}
+      {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
-</head>
+  </head>
 
-<body data-spy="scroll" data-target="#top-navbar" data-offset="100">
-
+  <body data-spy="scroll" data-target="#top-navbar" data-offset="100">
     <!--- NAVBAR ------------------------->
     {{- partial "navigators/navbar.html" . -}}
 
@@ -32,24 +30,24 @@
 
     <!--- ADD OPTIONAL SECTIONS ----------->
     {{ if .Site.Data.sections }}
-    {{ $background:= "bg-white"}}
-    {{ range sort .Site.Data.sections "section.weight" }}
-    {{ if .section.enable }}
-    <div class="container-fluid section-holder d-flex {{ $background }}">
-        {{ if .section.template }}
-        {{- partial .section.template . -}}
-        {{ else }}
-        {{- partial (printf "sections/%s.html" (replace (lower .section.name) " " "-")) . -}}
+      {{ $background:= "bg-white" }}
+      {{ range sort .Site.Data.sections "section.weight" }}
+        {{ if .section.enable }}
+          <div class="container-fluid section-holder d-flex {{ $background }}">
+            {{ if .section.template }}
+              {{- partial .section.template . -}}
+              {{ else }}
+              {{- partial (printf "sections/%s.html" (replace (lower .section.name) " " "-")) . -}}
+            {{ end }}
+          </div>
+          <!--- alter background color for next section --->
+          {{ if eq $background "bg-white" }}
+            {{ $background = "bg-dimmed" }}
+            {{ else }}
+            {{ $background = "bg-white" }}
+          {{ end }}
         {{ end }}
-    </div>
-    <!--- alter background color for next section --->
-    {{ if eq $background "bg-white" }}
-    {{ $background = "bg-dimmed" }}
-    {{ else }}
-    {{ $background = "bg-white" }}
-    {{end}}
-    {{ end }}
-    {{ end }}
+      {{ end }}
     {{ end }}
 
     <!--- ADD FOOTER ----------------------->
@@ -63,6 +61,5 @@
     <script src="/assets/js/github-button.js"></script>
     <script src="/assets/js/home.js"></script>
     <script src="/assets/js/jquery.filterizr.min.js"></script>
-</body>
-
+  </body>
 </html>
